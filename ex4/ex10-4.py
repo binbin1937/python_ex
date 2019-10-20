@@ -1,5 +1,8 @@
 import math
 
+#赋值程序开关
+key = 1
+
 # 采集信息的函数
 def myinput():
     choice = input('请选择计算类型：（1-人力计算，2-工时计算）')
@@ -31,10 +34,21 @@ def estimated(my_input):
         time = size * 80 / number
         print('项目大小为%.1f个标准项目，使用%d个人力完成，则需要工时数量为：%.1f个' %(size,number,time))
 
+#增加循环判断选择函数
+
+def again():
+    #声明全局变量key
+    global key
+    a1 = input('要继续吗，请输入y继续，输入其它退出：')
+    if a1 != 'y':
+        key = 0
+
 # 主函数
 def main():
-    my_input = myinput()
-    estimated(my_input)
+    while key == 1:
+        my_input = myinput()
+        estimated(my_input)
+        again()
 
 # 调用主函数
 main()
