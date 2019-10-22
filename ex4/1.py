@@ -1,4 +1,4 @@
-temp = ['A','B','C']
+temp = ['A','B','C','D']
 
 for i in range(3):
     temp1 = temp[0]
