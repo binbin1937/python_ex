@@ -19,3 +19,4 @@ class Book:
 #print(book.author)
 book1 = Book('像自由一样美丽', '林达', '你要用光明来定义黑暗，用黑暗来定义光明')
 print(book1.show_info())
+
